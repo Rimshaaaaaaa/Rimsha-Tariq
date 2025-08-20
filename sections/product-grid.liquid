@@ -1,0 +1,35 @@
+{% schema %}
+{
+    "name": "Product Grid",
+    "settings": [
+        { "type": "product_list", "id": "products", "label": "Select Products", "limit":6}
+    ]
+}
+{% endschema %}
+<section class="product_list">
+    <div class ="grid">
+        {% for product in section.settings.products %}
+            <div class="product.card"
+                data-handle="{{ product.handle}}"
+                data-title="{{ product.title }}"
+                data-price="{{ product.price | money }}"
+                data-description="{{ product.description | strip_html }}"
+            <img src="{{ product.featured_image | img_url: 'medium'}}" alt="{{ product.title }}">
+            <h3>{{ product.title}}</h3>
+            <p>{{ product.price | money }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Model -->
+<div id="productModel" class="model hidden">
+    <div class="model=content">
+        <span class="close-btn">&time;</span>
+        <h2 id="modelTitle"></h2>
+        <p id="modelPrice"></p>
+        <p id="modelDesc"></p>
+        <select id="variantSelect"></select>
+        <button id="addToCartBtn">Add to Cart</button>
+    </div>
+</div>
