@@ -18,6 +18,13 @@
     transform: scale(1.1);
     background: #ff3b2e;
 }
+.custom-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+    background: #f8f8f8;
+  }
 
 /*Product Grid*/
 .product-grid .grid {

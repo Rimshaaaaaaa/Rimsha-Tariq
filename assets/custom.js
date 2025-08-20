@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () =>{
     let selectedProductHandle = "";
     //Open modal on product click
     document.querySelectorAll(".product-card").forEach(card => {
-        card.addEventListener("click", () => {
+        card.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent parent click
+            const card = icon.closest(".product-card");
             modal.classList.remove("hidden");
             modalTitle.textContent = card.dataset.title;
             modalPrice.textContent = card.dataset.price;

@@ -2,10 +2,11 @@
 {
     "name": "Banner",
     "settings":[
-        { "type": "text", "id": "title", "label": "Banner Title", "default": "Welcome to Our Store" },
+        { "type": "text", "id": "title", "label": "Banner Title", "default": "Find the ideal gift for your loved ones" },
         { "type": "text", "id": "subtitle", "label": "Banner subtitle", "default": "Shop the latest product now" },
         { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop now" },
-        { "type": "url", "id": "button_link", "label": "Button Link"}
+        { "type": "url", "id": "button_link", "label": "Button Link"},
+         { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL" }
     ]
 }
 {% endschema %}
@@ -19,3 +20,6 @@
         </a>
     </div>
 </section>
+<footer class="custom-footer">
+  <p>{{ section.settings.footer_text }}</p>
+</footer>
