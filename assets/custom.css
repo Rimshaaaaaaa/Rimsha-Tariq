@@ -35,6 +35,7 @@
 .product-card:hover {
     transform: scale(1.05);
 }
+.product-card { position: relative;}
 .product-card .plus-icon {
     position: absolute;
     top: 10px;
