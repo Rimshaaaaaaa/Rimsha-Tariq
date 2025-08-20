@@ -15,6 +15,7 @@
                 data-price="{{ product.price | money }}"
                 data-description="{{ product.description | strip_html }}"
             <img src="{{ product.featured_image | img_url: 'medium'}}" alt="{{ product.title }}">
+            <div class="plus-icon">+</div>
             <h3>{{ product.title}}</h3>
             <p>{{ product.price | money }}</p>
             </div>
